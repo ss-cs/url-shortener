@@ -36,3 +36,17 @@ go mod init url-shortener
 go run main.go
 Server will start on http://localhost:8080
 
+## 🧪 Usage
+1. Shorten a URL
+POST /shorten
+
+Request Body:
+{
+  "url": "https://example.com"
+}
+Response:
+{
+  "short_url": "http://localhost:8080/abc123"
+}
+
+
