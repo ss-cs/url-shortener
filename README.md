@@ -37,7 +37,7 @@ go run main.go
 Server will start on http://localhost:8080
 
 ## 🧪 Usage
-1. Shorten a URL
+### 1. Shorten a URL
 POST /shorten
 
 Request Body:
@@ -48,5 +48,28 @@ Response:
 {
   "short_url": "http://localhost:8080/abc123"
 }
+## 2. Redirect
+### GET /:code
+Redirects to the original long URL.
+
+Example:
+
+curl -L http://localhost:8080/abc123
+
+## 🔒 Notes
+This is an in-memory version; all data is lost on restart.
+
+Ideal for learning or as a base to build on (e.g., MongoDB support, Redis, expiration, rate limiting, etc.)
+
+## 🛠️ Future Improvements
+Add persistent storage (e.g., MongoDB or PostgreSQL)
+
+Expiration time for short URLs
+
+Analytics (click tracking)
+
+Frontend UI
+
+Authentication
 
 
